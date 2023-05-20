@@ -230,7 +230,10 @@ class FavoritesPage extends StatelessWidget {
     var appState = context.watch<MyAppState>();
     if (appState.favorites.isEmpty) {
       return Center(
-        child: Text('No favorites Items are Selected'),
+        child: Text(
+          'No favorites Items',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
       );
     }
     return Column(
